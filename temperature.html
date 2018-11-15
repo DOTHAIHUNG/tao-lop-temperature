@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span id="F"></span>
+<span id="K"></span>
+<script>
+    function temperature(c) {
+        this.C = c;
+
+        this.calF = function () {
+            if (this.C < -273) return alert("Khong tinh duoc");
+            return (this.C * 1.8 + 32);
+        }
+        this.calK = function () {
+            if (this.C < -273) return alert("Khong tinh duoc");
+            return (this.C + 273.15);
+        }
+    }
+
+    let myTemp = new temperature(25);
+    let temF = myTemp.calF();
+    let temK = myTemp.calK();
+    document.write(temF + "<br/>");
+    document.write(temK);
+</script>
+</body>
+</html>
